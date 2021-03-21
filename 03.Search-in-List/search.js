@@ -31,7 +31,7 @@ function search(ev) {
 
     if (word.value.length > 0) {
         let count = Array.from(p)
-            .filter(line => line.textContent.trim().substring(0, 2).includes(word.value))
+            .filter(line => line.textContent.trim().substring(0, 2).toLowerCase().includes(word.value.toLowerCase()))
 
         count
             .forEach(line => line.classList.add('active'));
